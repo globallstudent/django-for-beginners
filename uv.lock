@@ -2,6 +2,12 @@ version = 1
 revision = 2
 requires-python = ">=3.12"
 
+[manifest]
+members = [
+    "django-for-beginners",
+    "hello-world",
+]
+
 [[package]]
 name = "asgiref"
 version = "3.8.1"
@@ -29,6 +35,17 @@ wheels = [
 name = "django-for-beginners"
 version = "0.1.0"
 source = { virtual = "." }
+dependencies = [
+    { name = "django" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "django", specifier = ">=5.2.1" }]
+
+[[package]]
+name = "hello-world"
+version = "0.1.0"
+source = { virtual = "hello_world" }
 dependencies = [
     { name = "django" },
 ]
